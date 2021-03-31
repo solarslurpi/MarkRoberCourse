@@ -1,4 +1,4 @@
-# First Day Assignment
+# Meet Chompy
 ![chompy](../images/chompy.png)
 
 Meet Chompy.  Chompy CRAVES food scraps and cardboard.  YUM YUM!!!!  Done with a meal but there are scraps?  Feed  Chompy.. got cardboard or paper you need to get rid of?  Feed   Chompy..and be delighted by the actions - from chomping noises while it turns scraps into small pieces...to sounds of delight as it enjoys the attention.  Chompy has a friend, Dacomp (not pictured here, but about the size and shape of a big garbage bin like we have in the US where we put our waste for weekly pickup), who survives by taking in Chompy’s broken down food scraps and spinning them into gold!  Well, not the gold we see in jewelry...and not even fools gold, but dark, rich soil that when you use it to grow plants, they will thrive.
