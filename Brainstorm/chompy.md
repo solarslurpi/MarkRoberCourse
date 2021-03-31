@@ -10,10 +10,11 @@ NE = Non-Essential
 In priority order
 
 Needs to:
-- E chop up vegetables, fruits, cardboard, and paper into small pieces.
+- E chop at least 80% of scraps of vegetables, fruits, cardboard, and paper into small pieces.
 - E be safe - not cut or chop any fingers.
 - E have a mechanism to start and stop shredding.
 - E not jam.
+- E take a short amount of time, i.e.: be efficient.
 - E easy transfer of chopping to Dacomp.
 - E not cause a mess.
 
@@ -30,10 +31,17 @@ Needs to:
 
 ### Mechanisms to accomplish
 - Knives
+This is my "go to" method for cutting up vegetables and fruit.  So why not use it here?
 - Cleavers
+- Scissors
+- Slicer
+
+![slicer](../images/slicer.jpg)
+I just tried this slicer with an orange peel. I was able to get smaller pieces.  However,
 - Food processor
 
 ![food processor](../images/foodprocessor.png)
+I've been using a food processor to break down my veg/fruit waste prior to putting them into a compost bin.  It works well, but it is a bit of a pain putting the scraps in, scooping some out to put more in.  Then cleaning the food processor out.
 - Shredder
 
 ![shredder](../images/shredder.png)
