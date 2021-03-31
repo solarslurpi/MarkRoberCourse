@@ -5,39 +5,32 @@ Meet Chompy.  Chompy CRAVES food scraps and cardboard.  YUM YUM!!!!  Done with a
 
  And of course, now that you have grown all these fruits and vegetables....you can eat them...which will leave food scraps....and so the cycle continues
 # Requirements
+E = Essential
+NE = Non-Essential
+In priority order
+
 Needs to:
-- chop up vegetables, fruits, cardboard, and paper into small pieces.
-- not jam.
-- be safe - not cut or chop any fingers.
-- not cause a mess.
-- have a removable container holding the shredded material that is:
-    - easy to remove.
-    - interacts well with Dacomp.
-- have a mechanism to start and stop shredding.
-- have a mechanism to detect when the container is full and not allow any more food or paper to enter until the container is emptied.
-- delight the person feeding it so that they want to engage.
-- not take up too much space.
-- not smell.
-- be easy to clean.
-## Essential
-- chop up vegetables and fruits into small pieces.
-- be safe - not cut or chop any fingers.
-- not jam.
-- have a removable container holding the chopped material that is:
-    - easy to remove
-    - interacts well with Dacomp.
-- have a stop and start mechanism.
-- not cause a mess.
-## Non-Essential
-- not smell.  (i.e.: perhaps a filter monitoring system)
-- not take up too much space.
-- be easy to clean.
-- delight the person feeding it so that they want to engage.
-- chop up cardboard and paper into small pieces.
+- E chop up vegetables, fruits, cardboard, and paper into small pieces.
+- E be safe - not cut or chop any fingers.
+- E have a mechanism to start and stop shredding.
+- E not jam.
+- E easy transfer of chopping to Dacomp.
+- E not cause a mess.
+
+- NE not smell.
+- NE be easy to clean.
+- NE have a mechanism to detect when the container is full and not allow any more food or paper to enter until the container is emptied.
+- NE delight the person feeding it so that they want to engage.
+- NE not take up too much space.
+- NE chop up cardboard and paper into small pieces.
+
+
 # Separate Out
 ## Chop up Vegetables and Fruits
 
 ### Mechanisms to accomplish
+- Knives
+- Cleavers
 - Food processor
 
 ![food processor](../images/foodprocessor.png)
@@ -55,4 +48,7 @@ Needs to:
 ![grate](../images/grate.png)
 
 - Garbage Disposal
-
+## Start and Stop Mechanism
+- on/off switch
+- lever
+- handle
