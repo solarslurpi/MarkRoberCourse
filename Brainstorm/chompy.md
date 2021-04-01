@@ -4,7 +4,11 @@
 Meet Chompy.  Chompy CRAVES food scraps and cardboard.  YUM YUM!!!!  Done with a meal but there are scraps?  Feed  Chompy.. got cardboard or paper you need to get rid of?  Feed   Chompy..and be delighted by the actions - from chomping noises while it turns scraps into small pieces...to sounds of delight as it enjoys the attention.  Chompy has a friend, Dacomp (not pictured here, but about the size and shape of a big garbage bin like we have in the US where we put our waste for weekly pickup), who survives by taking in Chompy’s broken down food scraps and spinning them into gold!  Well, not the gold we see in jewelry...and not even fools gold, but dark, rich soil that when you use it to grow plants, they will thrive.
 
  And of course, now that you have grown all these fruits and vegetables....you can eat them...which will leave food scraps....and so the cycle continues
-# Requirements
+
+ # BRAINSTORM
+ ---
+
+## Requirements
 E = Essential
 NE = Non-Essential
 In priority order
@@ -26,10 +30,10 @@ Needs to:
 - NE chop up cardboard and paper into small pieces.
 
 
-# Separate Out
-## Chop up Vegetables and Fruits
+## Separate Out
+### Chop up Vegetables and Fruits
 
-### Mechanisms to accomplish
+#### Mechanisms to accomplish
 - Knives
 This is my "go to" method for cutting up vegetables and fruit.  So why not use it here?
 - Cleavers
@@ -74,7 +78,21 @@ I can imagine a grate tearing scraps to bits by abrasively rubbing against it, b
 - Garbage Disposal
 Garbage disposals are designed to liquify food into a slurry that is then dumped into our sewage system.  We need small bits, not liquid.
 
-## Start and Stop Mechanism
+### Start and Stop Mechanism
 - on/off switch
 - lever
 - handle
+
+# RESEARCH
+---
+The chopping mechanism is the overall beast of Chompy.  Given my time constraints, I will limit research and further exploration to two of the mechanisms I discussed in the brainstorming sections:
+- knives, cleavers (I see going from a knife to cleaver as a gradation?)...I'll be using the term "cutters" to refer to this mechanism.
+- food processor
+
+I use a food processor, so I feel I have experimented quite a bit with this option.
+
+With the cutters, I want to make one downward motion to cut scraps.  
+## Question
+What cutter will be the most efficient at making bits from scraps given one downward motion of the cutter?
+
+![cutter start](../images/cutter_start.jpg)
