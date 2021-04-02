@@ -68,6 +68,17 @@ This would work great.  My challenge is all those blades and the "precision" pos
 
 I could see using claws to be a lot of fun.  Growling while we tore orange peels, apple cores, and stray lettuce dripping with salad dressing into shreds.  Yet, as I pretend to do this, I feel my claws as pictured wouldn't be able to attach well to things like orange peels and everything would just stick.
 
+- Food Chopper
+
+![chopper](../images/foodchopper.png)
+
+I forgot about this one. I had a hand vegetable chopper. This type of mechanism might work well.
+
+- Dough Blender
+
+![pastry](../images/pastry.png) 
+
+My Mother had one of these...
 
 - Grater
 
@@ -85,14 +96,47 @@ Garbage disposals are designed to liquify food into a slurry that is then dumped
 
 # RESEARCH
 ---
-The chopping mechanism is the overall beast of Chompy.  Given my time constraints, I will limit research and further exploration to two of the mechanisms I discussed in the brainstorming sections:
+The chopping mechanism is the overall beast of Chompy.  I started by limiting research to two of the mechanisms I discussed in the brainstorming sections:
+- OOH THIS ONE IS COOL This cucumber slicer using a 3d printer...
+I was watching a video this AM....
+and check the way [the cucumber is sliced](https://youtu.be/FZnTdPuAecs?t=54)...cucumber sits on a rack with spacing for the plastic "knife".  Knife comes down, slices, then pushes over to a pile...it is just fun to watch.  Begs the question is this about fun or efficiency.  Well, if it is all about the video, then all about fun...
+
+
+I **really** like how plastic is being used...and its just the force slicing it..but then there are things like orange peels that would be harder..still...
+
 - knives, cleavers (I see going from a knife to cleaver as a gradation?)...I'll be using the term "cutters" to refer to this mechanism.
 - food processor
 
-I use a food processor, so I feel I have experimented quite a bit with this option.
-
-With the cutters, I want to make one downward motion to cut scraps.  
-## Question
-What cutter will be the most efficient at making bits from scraps given one downward motion of the cutter?
+Over the past few days, I have been on long drives working through family matters.  While I was not able to go to Home Depot or get to a garage/work space full of material to explore with, I was able to watch videos that could best represent experiments around questions I had:
+- **will knives work?**  How would that work with waste versus when "chopping" for cooking?  
 
 ![cutter start](../images/cutter_start.jpg)
+
+After watching a few videos where folks were explaining methods for cutting up vegetables, I began to realize:
+    - the motion of cutting vegetables into bits isn't as much fun as I had hoped.  I was hoping for more of a monster chop-chop where the blades would slam down on a cutting board. Vegetables/fruits can be goopy...cooks slide/roll the knife.  In addition, the blades need to be very sharp.  This causes the knives to be fragile. Another ding on using knives.
+- **can the bits flung out by the food processor get into the waste container?**  The challenge with the food processor is the bits are flung to the outer sides of the wall of the surrounding container.  This is hard to clean.
+
+...Today I thought about the dough blender and food chopper....
+
+I use a food processor, so I feel I have experimented quite a bit with this option.
+
+# PROTOTYPE
+At this point, I'd like to prototype these methods for chopping:
+- food chopper
+- dough blender
+- shredder
+
+I like a manual method.  A motor adds one more level of inconvenience (plugs in or needs batteries) and complexity (particularly for maintenance)...but...
+
+I just ordered a food chopper ad dough blender on Amazon.  I thought it would be "fun" to manually chop the waste with one of these items.
+
+But perhaps just having a shredder that looks like a pail where you scrape your scraps in and they get shredded is the most convenient/repeatable?
+
+![trash bin](../images/trashbin.png)
+
+## Cucumber Slicer
+I just want to do this.  What the heck?  This year has sucked.  Time to just enjoy this class...I'm all hands on this moving forward.
+
+## Shredder
+I want to prototype a shredder like the plastic shredders looking similar to this...
+
