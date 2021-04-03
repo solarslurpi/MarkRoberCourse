@@ -74,6 +74,10 @@ I could see using claws to be a lot of fun.  Growling while we tore orange peels
 
 I forgot about this one. I had a hand vegetable chopper. This type of mechanism might work well.
 
+I did an ["science experiment" video](https://youtu.be/RdokLm71CxA) and found:  
+- As a food chopper is currently designed, it won't do well chopping up "tougher" material like citrus peels.
+- It is easy to overfill.
+
 - Dough Blender
 
 ![pastry](../images/pastry.png) 
@@ -99,7 +103,7 @@ Garbage disposals are designed to liquify food into a slurry that is then dumped
 The chopping mechanism is the overall beast of Chompy.  I started by limiting research to two of the mechanisms I discussed in the brainstorming sections:
 - OOH THIS ONE IS COOL This cucumber slicer using a 3d printer...
 I was watching a video this AM....
-and check the way [the cucumber is sliced](https://youtu.be/FZnTdPuAecs?t=54)...cucumber sits on a rack with spacing for the plastic "knife".  Knife comes down, slices, then pushes over to a pile...it is just fun to watch.  Begs the question is this about fun or efficiency.  Well, if it is all about the video, then all about fun...
+and check the way ...cucumber sits on a rack with spacing for the plastic "knife".  Knife comes down, slices, then pushes over to a pile...it is just fun to watch.  Begs the question is this about fun or efficiency.  Well, if it is all about the video, then all about fun...
 
 
 I **really** like how plastic is being used...and its just the force slicing it..but then there are things like orange peels that would be harder..still...
@@ -119,7 +123,13 @@ After watching a few videos where folks were explaining methods for cutting up v
 ...Today I thought about the dough blender and food chopper....
 
 I use a food processor, so I feel I have experimented quite a bit with this option.
-
+# DESIGN
+I'm breaking options into three designs:
+- Plastic Slicing - similar to  [the cucumber slicer in this video](https://youtu.be/FZnTdPuAecs?t=54)
+*Note: Video is the design diagram*
+- Arcade Slicing - 
+- Shredding - similar to [the Green Cycler](https://www.youtube.com/watch?v=rDH--O7dPuo)
+*Note: Video is design diagram...also - I never heard of it, 7 years ago - bad timing or bad product or both?*
 # PROTOTYPE
 At this point, I'd like to prototype these methods for chopping:
 - food chopper
