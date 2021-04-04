@@ -34,6 +34,16 @@ Needs to:
 ### Chop up Vegetables and Fruits
 
 #### Mechanisms to accomplish
+- Vegetable Chopper
+I got to thinking about this after reviewing all other options and thinking about cost/complexity/easy use of each..... 
+
+![new veggie chopper](../images/new_veggie_chopper.png)
+
+*See [this Amazon.com item](https://amzn.to/3wqFm0k)*
+
+But instead of person chopping, use gravity and drop the top (weighted or with a spring force) onto the scraps.
+
+*Q: Is using weights "better" than using spring force to release the top piece?*
 - Knives
 This is my "go to" method for cutting up vegetables and fruit.  So why not use it here?
 - Cleavers
