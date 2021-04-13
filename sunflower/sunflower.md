@@ -12,9 +12,10 @@ I am building Sunshine.  It is a plastic flower that uses photoresistors and ser
 I am grateful for (and in awe of) the knowledge these folks shared:
 - [Great Scott's YouTube Video: DIY Solar Tracker || How much solar energy can it save?](https://www.youtube.com/watch?v=_6QIutZfsFs)
 - [fbuenonet's Thingiverse Mini Pan Tilt - Servo G9](https://www.thingiverse.com/thing:708819)
+- [About Servos and Feedback](https://learn.adafruit.com/analog-feedback-servos?view=all)
 - [What is a Servo Motor and How it Works?](https://www.youtube.com/watch?v=ditS0a28Sko) (Not sure why it's called a servo motor versus positioning motor?)
 
-I learned from and copied several of the techniques they showed in their video.
+I learned from and copied several of the techniques.
 
 # Requirements
 E = Essential
@@ -104,15 +105,15 @@ From [Adafruit's Learning Guide](https://learn.adafruit.com/circuitpython-essent
 
 *Connect the servo's yellow or white signal wire to the control/data pin, in this case A1 or A2 but you can use any PWM-capable pin.*
 ## Test
-Ran [Adafruit's code](https://github.com/adafruit/Adafruit_Learning_System_Guides/blob/master/CircuitPython_Essentials/CircuitPython_Servo.py) using the Mu editor.  Worked great.
+Ran [Adafruit's code](https://github.com/adafruit/Adafruit_Learning_System_Guides/blob/master/CircuitPython_Essentials/CircuitPython_Servo.py) using the Mu editor. I used the USB pin for 5V power to servo and A2 for servo input.  Exactly what the learning guide said to do. 
 
 ![Circuit Python Servo test](../images/circuitpython_servo_test.jpeg)
 
-I used the USB pin for 5V power to servo and A2 for servo input.  Exactly what the learning guide said to do.
+**Worked great.**
 
+### Photoresistor 
+*Note...hmmm...I don't seem to have 10K resistors, so using a 2.2K voltage divider resistor.  I am ordering more from Amazon because 10K is popular...besides, less than a cup of fancy coffee.  Although I could put resistors in series/parallel..but this makes the bread board even messier, etc...*
 
-### Photoresistor control of servo
-*Stopped here for now*
 As is typical, [Adafruit has a great write up on photoresistors](https://learn.adafruit.com/photocells):
 
 *Photocells are basically a resistor that changes its resistive value (in ohms Ω) depending on how much light is shining onto the squiggly face. They are very low cost, easy to get in many sizes and specifications, but are very inaccurate. Each photocell sensor will act a little differently than the other, even if they are from the same batch. The variations can be really large, 50% or higher! For this reason, they shouldn't be used to try to determine precise light levels in lux or millicandela. Instead, you can expect to only be able to determine basic light changes.*
@@ -133,7 +134,66 @@ Since the photoresistor is just a variable resistor, wiring and reading values u
 - Board GND to the other leg of the 10 kilo-ohm resistor.
 - Board A1 (or any other analog input) to the junction of the photocell & 10 kilo-ohm resistor.
 
-*BELOW IS TBD...UNDER CONSTRUCTION*
+Wired up.  The code here is simple and worked fine.  I just ran this in REPL:
+```
+import board
+import analogio
+photoresistor = analogio.AnalogIn(board.A3) 
+photoresistor.value
+```
+e.g. values (voltage divider resistor = 22K):
+- ambient: 36144
+- hand over photoresistor: 22960
+- iPhone light on photoresistor: 54592
+
+values when voltage divider resistor = 2.2K:
+- ambient: 10352
+- hand over photoresistor: 4928
+- iPhone light on photoresistor: 24624
+**worked great**
+### Photoresistor Controlling Servo
+![photo resistor controlling servo](../images/photoresistor_controlling_servo_first_try.jpeg)
+
+The wiring is set up, now it is just a matter of code:
+```
+# Move the servo based on photoresistor readings
+# NOTE: I did not have 10K resistors.  I did have 22K resistors, so used tho
+
+# Libraries used
+import board
+import analogio
+import pwmio
+import simpleio
+from adafruit_motor import servo
+import time
+
+# Create a PWMOut object on Pin A2.
+pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
+
+# Create a servo object, my_servo.
+my_servo = servo.Servo(pwm)
+
+# Assign the photoresistor readout to Pin A3
+photoresistor = analogio.AnalogIn(board.A3) 
+
+# Let's have some fun!
+while True:
+    
+    # Map the light reading to a server angle.
+    # As noted in Learn.adafruit (photocells, circuitpython),the range of possible
+    # resistor values is 0 to 65535 (max 16 bit unsigned integer).
+    # The range of the servo arm is 0 to 180 degrees.
+    angle = simpleio.map_range(photoresistor.value,0,65535,0,180) # get the light value and map it to a servo value
+     
+    # Move the servo to the mapped angle.
+    
+    my_servo.angle = angle
+    time.sleep(0.05) # Adafruit sample does this so I do it too!
+```
+***
+# BELOW IS TBD...UNDER CONSTRUCTION
+***
+
 
 # Stuff that I find Interesting
 Learnings that help me be a better Maker.
