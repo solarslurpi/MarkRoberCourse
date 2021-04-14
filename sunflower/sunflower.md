@@ -190,6 +190,80 @@ while True:
     my_servo.angle = angle
     time.sleep(0.05) # Adafruit sample does this so I do it too!
 ```
+# Working Prototype
+View from front:
+
+![proto1 front](../images/sunflower_proto1_front.jpeg)
+
+View from back:
+
+![proto1 back](../images/sunflower_proto1_back.jpeg)
+
+I placed four photoresists - one on each corner - of a cardboard "sunflower".  The internal circle holds a solar cell.  The solar cell is not necessary for this prototype.  However, I could see a good use in powering outdoor electronics so I'm seeing how the weight holds up.
+
+The back view not only shows the wiring, but the use of [fbuenonet's Thingiverse Mini Pan Tilt - Servo G9](https://www.thingiverse.com/thing:708819).
+
+## UHOH! NO PWM...
+I started setting up a server motor on pin A1.  I got the message:
+```
+ValueError: All timers for this pin are in use
+```
+Running [Adafruit's "Where's my PWM?" code](https://learn.adafruit.com/circuitpython-essentials/circuitpython-pwm#wheres-my-pwm-2984449-30), I got the following results:
+```
+No PWM on: A0
+No PWM on: A1
+PWM on: A2
+PWM on: A3
+PWM on: A4
+No PWM on: A5
+PWM on: APA102_MOSI
+PWM on: APA102_SCK
+PWM on: D0
+PWM on: D1
+PWM on: D10
+PWM on: D11
+PWM on: D12
+PWM on: D13
+PWM on: D2
+PWM on: D3
+PWM on: D4
+PWM on: D5
+PWM on: D6
+PWM on: D7
+PWM on: D8
+PWM on: D9
+PWM on: L
+PWM on: MISO
+PWM on: MOSI
+PWM on: RX
+PWM on: SCK
+PWM on: SCL
+PWM on: SDA
+PWM on: TX
+```
+No PWM support on A1 or A0 to D7 and D9
+## Test - 4 Photoresistor on corners
+The intent here is to get readings for the four corners.  All worked well except the lower right's high value was significantly lower ( ~20K versus ~50K) when shining a light directly at the photocell.  I checked the wiring which seemed ok.  
+
+- use  a different photoresistor on Lower Right.
+## Test - move servo motors
+```
+"""CircuitPython Essentials Servo standard servo example"""
+import time
+import board
+import pwmio
+from adafruit_motor import servo
+
+
+pwm1 = pwmio.PWMOut(board.D9, duty_cycle=2 ** 15, frequency=50)
+pwm2 = pwmio.PWMOut(board.D10, duty_cycle=2 ** 15, frequency=50)
+
+
+my_servo1 = servo.Servo(pwm1)
+my_servo2 = servo.Servo(pwm2)
+```
+
+
 ***
 # BELOW IS TBD...UNDER CONSTRUCTION
 ***
