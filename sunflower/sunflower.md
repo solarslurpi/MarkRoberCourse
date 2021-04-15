@@ -29,16 +29,11 @@ In priority order
 
 TL;DR Sadly, not enough time for putting a stem on.
 
-- E powered by solar.  I mean, this is all about honoring the sun's power!
-
 # Questions
-- Where should I place the photoresistors to maximize the effect of head movement?
-- What months should Sunshine be outside?
+- Where should I place the photoresistors to maximize the effect of head movement? (Answer: Upper right, left and Lower right,left)
+- What months should Sunshine be outside? (see below)
 
-- How much energy will the solar panel provide?
-- Will my small solar panel be enough to power the microcontroller + servo motors?  Since the action of this art piece is to follow the sun, I am not concerned with powering when there is no sun.  However, most of the year, there will not be A LOT of sun to begin with.
-
-- Can I go directly from solar panel to powering the microcontroller or do I have to use a battery?
+- Can I go directly from solar panel to powering the microcontroller or do I have to use a battery? (TBD)
 # Materials
 Due to time constraints, I am focusing on using components I have or make me happy:
 - Microcontroller: Adafruit's ItsyBitsy.  I love working with Adafruit's stuff.  They are great people with a great community.  They and the community are kind and inclusive.
@@ -47,11 +42,6 @@ Due to time constraints, I am focusing on using components I have or make me hap
 - A [Samsung INR18650-25R battery](https://www.imrbatteries.com/content/samsung_25r_2.pdf) also gathering dust.
 
 
-# Answers
-## Placement of Photoresistors
-
-
-*TBD*
 ## Months Sunshine Should be Outside
 The best months have higher levels of solar radiation.  These are correlated to times when we are outside.
 ### Summary
