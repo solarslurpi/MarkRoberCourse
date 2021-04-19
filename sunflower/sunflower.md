@@ -255,7 +255,7 @@ my_servo2 = servo.Servo(pwm2)
 ```
 # Final Build
 ## Summary
-The [video where the flower chases the sun](https://youtu.be/WPwZnfiEPWs) is the most interesting aspect.
+The [video where the flower chases the sun](https://youtu.be/MeZHho41cKg) is the most interesting aspect.
 ## Components
 ![components](../images/components.jpeg)
 - There were so many wires, I ended up soldering everything to a proto PCB board.  It was a bit of a bear on the soldering.  But I'm always up to a good soldering practice!  But it certainly made wire management MUCH easier
