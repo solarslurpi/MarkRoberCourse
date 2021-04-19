@@ -14,6 +14,7 @@ I am grateful for (and in awe of) the knowledge these folks shared:
 - [fbuenonet's Thingiverse Mini Pan Tilt - Servo G9](https://www.thingiverse.com/thing:708819)
 - [About Servos and Feedback](https://learn.adafruit.com/analog-feedback-servos?view=all)
 - [What is a Servo Motor and How it Works?](https://www.youtube.com/watch?v=ditS0a28Sko) (Not sure why it's called a servo motor versus positioning motor?)
+- [Happy Face Base on Thingiverse](https://www.thingiverse.com/thing:1381750)
 
 I learned from and copied several of the techniques.
 
@@ -22,8 +23,16 @@ E = Essential
 NE = Non-Essential
 In priority order
 - E Simplify the project such that it is completed within the 3 day timeframe.
-- E Flower (head) moves it's face to the sun.
+- E Face moves easily.
+- E On sunny days, the Flower (head) moves it's face to the sun (a location that points to the general location of the sun at that moment).
+- E The face is in a noticeably different location by the end of the day.
+- E The face fairly accurately traces the sun's angle on sunny days.
 - E Powered by a battery so it can be outside.
+    - stop/start when there is not enough light.
+- E Create a time-lapse video **(Not sure about this?)**
+    - GoPro, NEST cam, iPhone, GH5(?) (The ones Mark noted.  I have an iPhone...)
+    - stop/start video when there is not enough light.
+- E Eyes that move to where the Sun is located.  I probably won't get to this because of time constraints.  But given how story based this course is, having moving eyes would add a lot of personality.
 - NE Solar panel recharges battery.  I mean, we're in the sun, go solar!
 - NE Flower also has a stem that moves (gracefully) when the flower moves.  It is easiest to make just the head and have it move.  Mounting the head on a long stem and then adjusting the stem provides an "eye catcher".  However, the weight of the flower on the stem causes a challenge as does mimicking graceful movement.  With that said it is an opportunity to combine mechanical with electrical....
 
@@ -34,13 +43,6 @@ TL;DR Sadly, not enough time for putting a stem on.
 - What months should Sunshine be outside? (see below)
 
 - Can I go directly from solar panel to powering the microcontroller or do I have to use a battery? (TBD)
-# Materials
-Due to time constraints, I am focusing on using components I have or make me happy:
-- Microcontroller: Adafruit's ItsyBitsy.  I love working with Adafruit's stuff.  They are great people with a great community.  They and the community are kind and inclusive.
-- Scripting Language: CircuitPython. It is a far easier environment than Arduino.
-- A [small solar panel](https://amzn.to/2OGzq2h) gathering dust in one of our closets.
-- A [Samsung INR18650-25R battery](https://www.imrbatteries.com/content/samsung_25r_2.pdf) also gathering dust.
-
 
 ## Months Sunshine Should be Outside
 The best months have higher levels of solar radiation.  These are correlated to times when we are outside.
@@ -80,7 +82,6 @@ I'm using an [ItsyBitsy from Adafruit](https://learn.adafruit.com/assets/55467) 
 ![itsybitsy pinout](../images/adafruit_products_pinouts_itsybitsy.jpg)
 ## Mark's Photoresistor + Servo Motor Experiment
 Recreating to do a better job on my build and to recreate in CircuitPython.
-## Wiring Diagram
 ### Servo Motor
 Servo motors are used for precise (angular or linear) positioning.
 - [Adafruit's Circuit Python Servo Motor Fritzing Diagram](https://learn.adafruit.com/assets/51929)
@@ -252,6 +253,68 @@ pwm2 = pwmio.PWMOut(board.D10, duty_cycle=2 ** 15, frequency=50)
 my_servo1 = servo.Servo(pwm1)
 my_servo2 = servo.Servo(pwm2)
 ```
+# Final Build
+## Summary
+The [video where the flower chases the sun]() is the most interesting aspect.
+## Components
+![components](../images/components.jpeg)
+- There were so many wires, I ended up soldering everything to a proto PCB board.  It was a bit of a bear on the soldering.  But I'm always up to a good soldering practice!  But it certainly made wire management MUCH easier
+- Powered by 4 AA batteries.
+- wires go to 2 servos and 4 photoresistors
+- 3D printed sunflower (purple) and mini pan tilt (green)
+- Circuit Python code - [chasingTheSun.py](code\chasingTheSun.py)
+
+I am satisfied with what I have accomplished.  The sunflower works.
+
+
+## MORE DETAIL I USED DURING PROJECT DEVELOPMENT.
+
+
+## Color coding of flower wires
+The Flower has four photoresistors at each "corner".  
+| Position    | Wire Color | Analog Pin | 
+|-------------|------------|------------| 
+| Upper Left  | Blue       | A2         | 
+| Upper Right | Orange     | A3         | 
+| Lower Right | Yellow     | A4         | 
+| Lower Left  | Green      | A5         | 
+
+The red wire plugs into the 3V pin of the ItsyBitsy.
+## Calibrating the Photoresistors
+I was getting different readings under similar lighting conditions:
+```
+Upper left: 13408
+Upper right: 7392
+Lower right: 10912
+Lower left: 10976
+```
+First I got average readings using [get_averages.py](code\get_averages.py)
+### LOW Readings
+I put a dark cloth over the photoresistors and took the average of 100 readings:
+```
+UL: 170.56, UR: 180.8, LR: 235.2, LL: 174.08
+```
+Three were close enough.  However, the LR was a tad higher.  This could be an artifact of how the wires stuck out of the dark cloth.  Due to time constraints, I'll press on with these values instead of exploring further.
+### HIGH Readings
+I put a flashlight directly on top of each photoresistor.
+```
+UL: 62144.3
+UR = 61040.0
+LR: 48747.8
+LL: 60482.2
+```
+Again, it seemed LR was the "different" one.
+## Testing Servo Motors
+I ran [test_servos](code\test_servos.py) to make sure the servos worked.
+I uploaded [a short video showing the servo motors doing their thing](https://youtu.be/2smJGX4DeHc)
+## Move the Flower towards the sun
+Now we're COOKING With SOLAR (well not really, we're using batteries that we throw away, but hey - this is all about the story...not about the Earth...hmmm...)
+## Powering 
+## Servo Motors
+Both servo motors are powered by the 4 1.5 V batteries "wired" in series such that 4 x 1.5V = 6V.  
+## ItsyBitsy
+- plugged in: uses USB power
+- not plugged in: Another load on the batteries.
 
 
 ***
